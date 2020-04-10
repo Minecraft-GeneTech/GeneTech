@@ -1,0 +1,16 @@
+[
+{
+  "modid": "genetech",
+  "name": "Gene Tech",
+  "description": "Gene is wonderful!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["UtopiaXC"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
