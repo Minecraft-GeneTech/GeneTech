@@ -12,6 +12,6 @@ public class Syringe extends Item {
     public Syringe(){
         super();
         this.setUnlocalizedName("itemSyringe");
-        maxStackSize = 1;
+        maxStackSize = 16;
     }
 }
