@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "genetech:syringe",
+    "count": 1
+  },
+  "pattern": [
+    "Iaa",
+    "aGa",
+    "aaI"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "a": {
+      "item": "minecraft:air"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    }
+  }
+}
