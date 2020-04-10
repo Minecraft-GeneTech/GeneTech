@@ -13,10 +13,18 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 
 public class itemLoader {
 
-    public static final CreativeTabs EXAMPLE_CREATIVE_TAB = new CreativeTabs("genetech_items") {
+    static Map<Item,String> items = new HashMap<Item,String>();
+
+    public static final CreativeTabs ITEM_CREATIVE_TAB = new CreativeTabs("genetech_items") {
         @Override
         public ItemStack getTabIconItem() {
             return new ItemStack(Items.DIAMOND);
@@ -24,14 +32,16 @@ public class itemLoader {
     };
 
     public itemLoader(FMLPreInitializationEvent event) {
-
+        items.put(new Syringe().setCreativeTab(ITEM_CREATIVE_TAB),"genetech:syringe");
     }
 
     @Mod.EventBusSubscriber(modid = "genetech")
     public static final class ItemInitializer {
         @SubscribeEvent
         public static void registerItem(RegistryEvent.Register<Item> event) {
-
+            for(Map.Entry<Item, String> entry : items.entrySet()){
+                event.getRegistry().register(entry.getKey().setRegistryName(entry.getValue()));
+            }
         }
     }
 
@@ -39,6 +49,10 @@ public class itemLoader {
     public static final class ModelMapper {
         @SubscribeEvent
         public static void onModelReg(ModelRegistryEvent event) {
+            for(Item item:items.keySet()){
+                ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+
+            }
 
         }
     }
