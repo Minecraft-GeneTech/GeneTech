@@ -1,10 +1,20 @@
 package com.minecraft.genetech.items;
 
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.relauncher.Side;
+
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class itemLoader {
 
@@ -23,4 +33,24 @@ public class itemLoader {
             return new ItemStack(items.get("genetech:syringe"));
         }
     };
+
+    @Mod.EventBusSubscriber(modid = "genetech")
+    public static final class ItemInitializer {
+        @SubscribeEvent
+        public static void registerItem(RegistryEvent.Register<Item> event) {
+
+            for (Map.Entry<String, GeneTechItems> entry : items.entrySet())
+                event.getRegistry().register(entry.getValue().setRegistryName(entry.getKey()));
+        }
+    }
+
+
+    @Mod.EventBusSubscriber(value = Side.CLIENT, modid = "genetech")
+    public static final class ModelMapper {
+        @SubscribeEvent
+        public static void onModelReg(ModelRegistryEvent event) {
+            for(GeneTechItems item:items.values())
+                ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(Objects.requireNonNull(item.getRegistryName()), "inventory"));
+        }
+    }
 }

@@ -30,21 +30,4 @@ public class GeneTechItems extends Item {
     String getRegName(){
         return regName;
     }
-
-    @Mod.EventBusSubscriber(modid = "genetech")
-    public static final class ItemInitializer {
-        @SubscribeEvent
-        public static void registerItem(RegistryEvent.Register<Item> event) {
-            event.getRegistry().register(item.setRegistryName(regName));
-        }
-    }
-
-
-    @Mod.EventBusSubscriber(value = Side.CLIENT, modid = "genetech")
-    public static final class ModelMapper {
-        @SubscribeEvent
-        public static void onModelReg(ModelRegistryEvent event) {
-            ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(Objects.requireNonNull(item.getRegistryName()), "inventory"));
-        }
-    }
 }
