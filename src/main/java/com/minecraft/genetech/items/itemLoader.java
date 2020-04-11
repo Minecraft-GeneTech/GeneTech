@@ -20,7 +20,7 @@ public class itemLoader {
 
     static Map<String,GeneTechItems> items = new HashMap<>();
 
-    public itemLoader(FMLPreInitializationEvent event) {
+    public itemLoader() {
         GeneTechItems itemSyringe=new Syringe();
         items.put(itemSyringe.getRegName(),itemSyringe);
         GeneTechItems itemSyringeFull=new SyringeFull();
