@@ -22,7 +22,13 @@ import java.util.Map;
 
 public class itemLoader {
 
-    static Map<String,Item> items = new HashMap<String,Item>();
+    static Map<String,GeneTechItems> items = new HashMap<>();
+
+    public itemLoader(FMLPreInitializationEvent event) {
+        GeneTechItems itemSyringe=new Syringe();
+        items.put(itemSyringe.getRegName(),itemSyringe);
+    }
+
 
     public static final CreativeTabs ITEM_CREATIVE_TAB = new CreativeTabs("genetech_items") {
         @Override
@@ -31,28 +37,6 @@ public class itemLoader {
         }
     };
 
-    public itemLoader(FMLPreInitializationEvent event) {
-        items.put("genetech:syringe",new Syringe().setCreativeTab(ITEM_CREATIVE_TAB));
-    }
 
-    @Mod.EventBusSubscriber(modid = "genetech")
-    public static final class ItemInitializer {
-        @SubscribeEvent
-        public static void registerItem(RegistryEvent.Register<Item> event) {
-            for(Map.Entry< String,Item> entry : items.entrySet()){
-                event.getRegistry().register(entry.getValue().setRegistryName(entry.getKey()));
-            }
-        }
-    }
 
-    @Mod.EventBusSubscriber(value = Side.CLIENT, modid = "genetech")
-    public static final class ModelMapper {
-        @SubscribeEvent
-        public static void onModelReg(ModelRegistryEvent event) {
-            for(Item item:items.values()){
-                ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-            }
-
-        }
-    }
 }
