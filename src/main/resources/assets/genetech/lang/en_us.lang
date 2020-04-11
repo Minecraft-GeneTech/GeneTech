@@ -1,2 +1,3 @@
 itemGroup.genetech_items=GeneTech Items
 item.itemSyringe.name=Syringe (Empty)
+item.itemSyringeFull.name=Syringe (Full)

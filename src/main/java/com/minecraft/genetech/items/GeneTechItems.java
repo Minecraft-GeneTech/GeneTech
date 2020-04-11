@@ -18,11 +18,11 @@ public class GeneTechItems extends Item {
 
     public GeneTechItems(String Unlocal,int stack,String regName) {
         super();
+        item=this;
         maxStackSize =stack;
+        setContainerItem(this);
         setUnlocalizedName(Unlocal);
         GeneTechItems.Unlocal =Unlocal;
-        setContainerItem(this);
-        item=this;
         GeneTechItems.regName =regName;
         this.setCreativeTab(itemLoader.ITEM_CREATIVE_TAB);
     }
@@ -36,7 +36,6 @@ public class GeneTechItems extends Item {
         @SubscribeEvent
         public static void registerItem(RegistryEvent.Register<Item> event) {
             event.getRegistry().register(item.setRegistryName(regName));
-
         }
     }
 
