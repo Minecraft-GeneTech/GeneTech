@@ -18,9 +18,9 @@ public class Syringe extends GeneTechItems {
     @SideOnly(Side.CLIENT)
     public boolean itemInteractionForEntity(ItemStack stack, EntityPlayer playerIn, EntityLivingBase target, EnumHand hand) {
         if (playerIn.getHeldItemMainhand().getItem() instanceof Syringe) {
-            if(!playerIn.addItemStackToInventory(new ItemStack(itemLoader.items.get("genetech:syringe")))){
+            if(!playerIn.addItemStackToInventory(new ItemStack(itemLoader.items.get(super.getRegName())))){
                 stack.shrink(1);
-                playerIn.addItemStackToInventory(new ItemStack(itemLoader.items.get("genetech:syringe")));
+                playerIn.addItemStackToInventory(new ItemStack(itemLoader.items.get(super.getRegName())));
             }else
                 stack.shrink(1);
             return true;
