@@ -11,6 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBed;
 import net.minecraft.item.ItemSeeds;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumHand;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -34,9 +35,12 @@ public class Syringe extends Item {
     @SideOnly(Side.CLIENT)
     public boolean itemInteractionForEntity(ItemStack stack, EntityPlayer playerIn, EntityLivingBase target, EnumHand hand) {
         if (playerIn.getHeldItemMainhand().getItem() instanceof Syringe) {
-            if(!playerIn.addItemStackToInventory(new ItemStack(new Syringe().setUnlocalizedName(target.getName())))){
+
+
+
+            if(!playerIn.addItemStackToInventory(new ItemStack(itemLoader.items.get("genetech:syringe")))){
                 stack.shrink(1);
-                playerIn.addItemStackToInventory(new ItemStack(new Syringe().setUnlocalizedName(target.getName())));
+                playerIn.addItemStackToInventory(new ItemStack(itemLoader.items.get("genetech:syringe")));
             }else
                 stack.shrink(1);
             return true;

@@ -22,25 +22,25 @@ import java.util.Map;
 
 public class itemLoader {
 
-    static Map<Item,String> items = new HashMap<Item,String>();
+    static Map<String,Item> items = new HashMap<String,Item>();
 
     public static final CreativeTabs ITEM_CREATIVE_TAB = new CreativeTabs("genetech_items") {
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack(Items.DIAMOND);
+            return new ItemStack(items.get("genetech:syringe"));
         }
     };
 
     public itemLoader(FMLPreInitializationEvent event) {
-        items.put(new Syringe().setCreativeTab(ITEM_CREATIVE_TAB),"genetech:syringe");
+        items.put("genetech:syringe",new Syringe().setCreativeTab(ITEM_CREATIVE_TAB));
     }
 
     @Mod.EventBusSubscriber(modid = "genetech")
     public static final class ItemInitializer {
         @SubscribeEvent
         public static void registerItem(RegistryEvent.Register<Item> event) {
-            for(Map.Entry<Item, String> entry : items.entrySet()){
-                event.getRegistry().register(entry.getKey().setRegistryName(entry.getValue()));
+            for(Map.Entry< String,Item> entry : items.entrySet()){
+                event.getRegistry().register(entry.getValue().setRegistryName(entry.getKey()));
             }
         }
     }
@@ -49,9 +49,8 @@ public class itemLoader {
     public static final class ModelMapper {
         @SubscribeEvent
         public static void onModelReg(ModelRegistryEvent event) {
-            for(Item item:items.keySet()){
+            for(Item item:items.values()){
                 ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-
             }
 
         }
