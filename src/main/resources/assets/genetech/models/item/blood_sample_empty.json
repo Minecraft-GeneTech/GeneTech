@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "genetech:items/syringe_full"
+    "layer0": "genetech:items/blood_sample_empty"
   },
   "display": {
     "thirdperson": {

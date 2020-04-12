@@ -1,3 +1,6 @@
 itemGroup.genetech_items=基因工程 物品
-item.itemSyringe.name=注射器 (空)
-item.itemSyringeFull.name=注射器 (满)
+item.itemSyringe.name=注射器
+item.itemPlastic.name=塑料
+item.itemNeedle.name=针头
+item.itemBloodSampleEmpty.name=血样试管（空）
+item.itemBloodSampleFull.name=血样试管

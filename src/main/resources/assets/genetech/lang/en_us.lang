@@ -1,3 +1,6 @@
 itemGroup.genetech_items=GeneTech Items
-item.itemSyringe.name=Syringe (Empty)
-item.itemSyringeFull.name=Syringe (Full)
+item.itemSyringe.name=Syringe
+item.itemPlastic.name=Plastic
+item.itemNeedle.name=Needle
+item.itemBloodSampleEmpty.name=Blood Sample (Empty)
+item.itemBloodSampleFull.name=Blood Sample

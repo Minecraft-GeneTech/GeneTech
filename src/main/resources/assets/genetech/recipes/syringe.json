@@ -1,23 +1,23 @@
 {
-  "result": {
-    "item": "genetech:syringe",
-    "count": 1
-  },
-  "pattern": [
-    "Iaa",
-    "aGa",
-    "aaI"
-  ],
   "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "N  ",
+    " S ",
+    "  P"
+  ],
   "key": {
-    "a": {
-      "item": "minecraft:air"
+    "P": {
+      "item": "genetech:plastic"
     },
-    "I": {
-      "item": "minecraft:iron_ingot"
+    "N": {
+      "item": "genetech:needle"
     },
-    "G": {
-      "item": "minecraft:glass"
+    "S":{
+      "item": "genetech:blood_sample_empty"
+    },
+    "result": {
+      "item": "genetech:syringe",
+      "count": 1
     }
   }
 }

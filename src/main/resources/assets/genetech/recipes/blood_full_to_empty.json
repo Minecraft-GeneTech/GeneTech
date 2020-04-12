@@ -1,0 +1,11 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "genetech:blood_sample_full"
+    }
+  ],
+  "result": {
+    "item": "genetech:blood_sample_empty"
+  }
+}

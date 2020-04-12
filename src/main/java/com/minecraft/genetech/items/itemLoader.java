@@ -23,8 +23,19 @@ public class itemLoader {
     public itemLoader() {
         GeneTechItems itemSyringe=new Syringe();
         items.put(itemSyringe.getRegName(),itemSyringe);
-        GeneTechItems itemSyringeFull=new SyringeFull();
-        items.put(itemSyringeFull.getRegName(),itemSyringeFull);
+
+        GeneTechItems itemPlastic=new Plastic();
+        items.put(itemPlastic.getRegName(),itemPlastic);
+
+        GeneTechItems itemNeedle = new Needle();
+        items.put(itemNeedle.getRegName(),itemNeedle);
+
+        GeneTechItems itemBloodSampleFull=new BloodSampleFull();
+        items.put(itemBloodSampleFull.getRegName(),itemBloodSampleFull);
+
+        GeneTechItems itemBloodSampleEmpty=new BloodSampleEmpty();
+        items.put(itemBloodSampleEmpty.getRegName(),itemBloodSampleEmpty);
+
     }
 
     public static final CreativeTabs ITEM_CREATIVE_TAB = new CreativeTabs("genetech_items") {
