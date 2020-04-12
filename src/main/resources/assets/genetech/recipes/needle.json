@@ -1,14 +1,10 @@
 {
-  "result": {
-    "item": "genetech:needle",
-    "count": 1
-  },
+ "type": "minecraft:crafting_shaped",
   "pattern": [
     "Iaa",
     "aIa",
     "aaI"
   ],
-  "type": "minecraft:crafting_shaped",
   "key": {
     "a": {
       "item": "minecraft:air"
@@ -16,5 +12,8 @@
     "I": {
       "item": "minecraft:iron_nugget"
     }
-  }
+  },
+   "result": {
+      "item": "genetech:needle"
+    }
 }

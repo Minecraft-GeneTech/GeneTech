@@ -12,12 +12,11 @@
     "N": {
       "item": "genetech:needle"
     },
-    "S":{
+    "S": {
       "item": "genetech:blood_sample_empty"
-    },
-    "result": {
-      "item": "genetech:syringe",
-      "count": 1
     }
+  },
+  "result": {
+    "item": "genetech:syringe"
   }
 }

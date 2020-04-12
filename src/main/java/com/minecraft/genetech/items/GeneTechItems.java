@@ -10,7 +10,6 @@ public class GeneTechItems extends Item {
         super();
         item=this;
         maxStackSize =stack;
-        setContainerItem(this);
         setUnlocalizedName(Unlocal);
         GeneTechItems.Unlocal =Unlocal;
         GeneTechItems.regName =regName;
