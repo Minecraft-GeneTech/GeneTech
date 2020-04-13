@@ -1,8 +1,8 @@
 package com.minecraft.genetech.items;
 
+import com.minecraft.genetech.loaders.itemLoader;
 import net.minecraft.item.Item;
 public class GeneTechItems extends Item {
-    public static String Unlocal;
     public static Item item;
     public static String regName;
 
@@ -11,12 +11,11 @@ public class GeneTechItems extends Item {
         item=this;
         maxStackSize =stack;
         setUnlocalizedName(Unlocal);
-        GeneTechItems.Unlocal =Unlocal;
         GeneTechItems.regName =regName;
         this.setCreativeTab(itemLoader.ITEM_CREATIVE_TAB);
     }
 
-    String getRegName(){
+    public String getRegName(){
         return regName;
     }
 }

@@ -1,11 +1,9 @@
 package com.minecraft.genetech.items;
 
-import net.minecraft.entity.EntityLiving;
+import com.minecraft.genetech.loaders.itemLoader;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.EnumHand;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;

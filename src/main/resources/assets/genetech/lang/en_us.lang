@@ -1,6 +1,10 @@
 itemGroup.genetech_items=GeneTech Items
+itemGroup.genetech_blocks=GeneTech Blocks
+
 item.itemSyringe.name=Syringe
 item.itemPlastic.name=Plastic
 item.itemNeedle.name=Needle
 item.itemBloodSampleEmpty.name=Blood Sample (Empty)
 item.itemBloodSampleFull.name=Blood Sample
+
+tile.blockBloodCentrifuge.name=Blood Centrifuge

@@ -1,6 +1,10 @@
 itemGroup.genetech_items=基因工程 物品
+itemGroup.genetech_blocks=基因工程 方块
+
 item.itemSyringe.name=注射器
 item.itemPlastic.name=塑料
 item.itemNeedle.name=针头
 item.itemBloodSampleEmpty.name=血样试管（空）
 item.itemBloodSampleFull.name=血样试管
+
+tile.blockBloodCentrifuge.name=血液离心机

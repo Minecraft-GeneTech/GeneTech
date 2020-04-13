@@ -1,8 +1,11 @@
-package com.minecraft.genetech.items;
+package com.minecraft.genetech.loaders;
 
+import com.minecraft.genetech.blocks.GeneTechBlocks;
+import com.minecraft.genetech.items.*;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
@@ -18,7 +21,7 @@ import java.util.Objects;
 
 public class itemLoader {
 
-    static Map<String,GeneTechItems> items = new HashMap<>();
+    public static Map<String, GeneTechItems> items = new HashMap<>();
 
     public itemLoader() {
         GeneTechItems itemSyringe=new Syringe();
@@ -52,9 +55,12 @@ public class itemLoader {
 
             for (Map.Entry<String, GeneTechItems> entry : items.entrySet())
                 event.getRegistry().register(entry.getValue().setRegistryName(entry.getKey()));
+            for (Map.Entry<String, GeneTechBlocks> entry : blockLoader.blocks.entrySet())
+                event.getRegistry().register(
+                        new ItemBlock(entry.getValue()).setRegistryName("genetech:"+entry.getKey())
+                );
         }
     }
-
 
     @Mod.EventBusSubscriber(value = Side.CLIENT, modid = "genetech")
     public static final class ModelMapper {
