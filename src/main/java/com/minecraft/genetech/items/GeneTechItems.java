@@ -11,7 +11,7 @@ public class GeneTechItems extends Item {
         item=this;
         maxStackSize =stack;
         setUnlocalizedName(Unlocal);
-        GeneTechItems.regName =regName;
+        GeneTechItems.regName ="genetech:"+regName;
         this.setCreativeTab(itemLoader.ITEM_CREATIVE_TAB);
     }
 

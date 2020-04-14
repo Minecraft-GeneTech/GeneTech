@@ -9,8 +9,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @SuppressWarnings("InstantiationOfUtilityClass")
 public class CommonProxy {
     public void preInit(FMLPreInitializationEvent event) {
-        new blockLoader();
         new itemLoader();
+        new blockLoader();
     }
 
     public void init(FMLInitializationEvent event) {

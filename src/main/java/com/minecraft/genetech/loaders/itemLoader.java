@@ -15,9 +15,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class itemLoader {
 
@@ -44,7 +43,7 @@ public class itemLoader {
     public static final CreativeTabs ITEM_CREATIVE_TAB = new CreativeTabs("genetech_items") {
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack(items.get("genetech:syringe"));
+            return new ItemStack(items.get("genetech:blood_sample_full"));
         }
     };
 
@@ -55,10 +54,6 @@ public class itemLoader {
 
             for (Map.Entry<String, GeneTechItems> entry : items.entrySet())
                 event.getRegistry().register(entry.getValue().setRegistryName(entry.getKey()));
-            for (Map.Entry<String, GeneTechBlocks> entry : blockLoader.blocks.entrySet())
-                event.getRegistry().register(
-                        new ItemBlock(entry.getValue()).setRegistryName("genetech:"+entry.getKey())
-                );
         }
     }
 
@@ -68,6 +63,6 @@ public class itemLoader {
         public static void onModelReg(ModelRegistryEvent event) {
             for(GeneTechItems item:items.values())
                 ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(Objects.requireNonNull(item.getRegistryName()), "inventory"));
-        }
+            }
     }
 }

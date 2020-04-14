@@ -11,7 +11,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class Syringe extends GeneTechItems {
 
     public Syringe() {
-        super("itemSyringe", 16, "genetech:syringe");
+        super("itemSyringe", 16, "syringe");
     }
 
     @SuppressWarnings("NullableProblems")

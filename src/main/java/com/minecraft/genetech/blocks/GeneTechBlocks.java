@@ -19,7 +19,7 @@ public class GeneTechBlocks extends Block {
         this.setLightOpacity(LightOpacity);
         this.setResistance(Resistance);
         this.setUnlocalizedName(Unlocal);
-        GeneTechBlocks.regName=regName;
+        GeneTechBlocks.regName="genetech:"+regName;
         this.setCreativeTab(blockLoader.BLOCKS_CREATIVE_TAB);
     }
 
