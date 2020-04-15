@@ -9,8 +9,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
 public class GeneZombie extends GeneMob{
-	private static final DataParameter<Integer> SKIN = EntityDataManager.createKey(GeneZombie.class, DataSerializers.VARINT);
-	public static final ResourceLocation LOOT_TABLE = GeneMain.prefix("");
+	private static final  DataParameter<Integer> SKIN = EntityDataManager.createKey(GeneZombie.class, DataSerializers.VARINT);
+	public static final  ResourceLocation LOOT_TABLE = GeneMain.prefix("");
 	
 	public GeneZombie(World worldIn) {
 		super(worldIn);

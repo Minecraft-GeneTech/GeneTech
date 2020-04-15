@@ -11,7 +11,7 @@ public class ModelGene extends ModelBase {
 	protected void setRotation(ModelRenderer model, float x, float y, float z) {
 		model.rotateAngleX = x;
 		model.rotateAngleY = y;
-		model.rotateAngleZ = z;
+		model.rotateAngleZ = z ;
 	}
 
 	protected void convertToChild(ModelRenderer parParent, ModelRenderer parChild) {

@@ -2,8 +2,8 @@ package com.minecraft.genetech.renderentity;
 
 import com.minecraft.genetech.GeneMain;
 import com.minecraft.genetech.entitymob.GeneZombie;
-import com.minecraft.genetech.entitymob.model.ModelGeneZomb;
 
+import com.minecraft.genetech.modelentity.ModelGeneZomb;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;

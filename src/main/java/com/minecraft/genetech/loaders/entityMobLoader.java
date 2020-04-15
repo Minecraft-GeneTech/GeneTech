@@ -19,7 +19,7 @@ import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
 import net.minecraftforge.registries.IForgeRegistry;
 
 @Mod.EventBusSubscriber(modid = GeneMain.MODID)
-public class entityMobLoader {
+public class  entityMobLoader {
 	
 	private static class EntityRegistryHelper {
 

@@ -18,7 +18,7 @@ public class ModelGeneZomb extends ModelGene {
 	private ModelRenderer headeyes;
 	private ModelRenderer headaccessory;
 	private ModelRenderer neck;
-	private ModelRenderer bodytop;
+	private ModelRenderer bodytop ;
 	private ModelRenderer bodymiddle;
 	private ModelRenderer bodymiddlebutton;
 	private ModelRenderer bodybottom;

@@ -14,7 +14,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class RendererGene extends Render<Entity> {
+public class  RendererGene extends Render<Entity> {
 	private final float scale;
 	protected final Item item;
 

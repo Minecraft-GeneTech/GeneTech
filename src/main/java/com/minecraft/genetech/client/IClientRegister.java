@@ -1,5 +1,5 @@
 package com.minecraft.genetech.client;
 
-public interface IClientRegister {
+public interface  IClientRegister {
 	void registerClient();
 }

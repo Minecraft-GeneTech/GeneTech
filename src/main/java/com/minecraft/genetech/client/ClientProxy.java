@@ -37,7 +37,7 @@ public class ClientProxy extends CommonProxy {
         }
     }
     @Override
-    public void registerRenders() {
+    public void  registerRenders() {
         float tiny = 0.25F;
         float small = 0.4F;
         float med = 0.5F;
