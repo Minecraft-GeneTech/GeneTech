@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 public class mobGeneZombieRender extends RenderLiving<mobGeneZombie> {
 
     private static final ResourceLocation MOB_GENE_ZOMBIE_TEXTURE = new ResourceLocation(
-            "genetech" + ":" + "textures/entity/gene_zombie.png");
+            "genetech" + ":" + "textures/entity/mobs/gene_zombie.png");
 
     public mobGeneZombieRender(RenderManager rendermanagerIn) {
         super(rendermanagerIn, new GeneZombieModel(), 0.5F);
