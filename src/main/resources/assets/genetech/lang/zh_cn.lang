@@ -8,3 +8,5 @@ item.itemBloodSampleEmpty.name=血样试管（空）
 item.itemBloodSampleFull.name=血样试管
 
 tile.blockBloodCentrifuge.name=血液离心机
+
+entity.mobGeneZombie.name=基因工程-僵尸

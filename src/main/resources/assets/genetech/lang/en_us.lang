@@ -8,3 +8,5 @@ item.itemBloodSampleEmpty.name=Blood Sample (Empty)
 item.itemBloodSampleFull.name=Blood Sample
 
 tile.blockBloodCentrifuge.name=Blood Centrifuge
+
+entity.mobGeneZombie.name=Gene Zombie
